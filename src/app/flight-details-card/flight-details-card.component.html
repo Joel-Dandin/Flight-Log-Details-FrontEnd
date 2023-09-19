@@ -1,0 +1,17 @@
+<div class="card w-96 bg-base-100 shadow-xl">
+  <div class="card-body">
+    <div class="flex justify-between items-center">
+      <h2 class="card-title">{{ flightData.name }}</h2>
+      <div class="badge badge-primary">Id {{ flightData.id }}</div>
+    </div>
+
+    <p>{{ flightData.description }}</p>
+
+    <div class="card-actions justify-end items-center">
+      <div class="badge badge-lg">
+        Serial Number : {{ flightData.serial_number }}
+      </div>
+      <button class="btn btn-primary">More Details</button>
+    </div>
+  </div>
+</div>

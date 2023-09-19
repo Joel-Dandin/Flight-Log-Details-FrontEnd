@@ -1,0 +1,9 @@
+<div class="bg-base-200 ">
+    <h1 class="text-3xl flex justify-center py-8">All Flights</h1>
+    <div class="grid grid-cols-3 gap-4 justify-items-center">
+        <app-flight-details-card *ngFor="let card of cards"
+        [flightData]="card">
+            
+        </app-flight-details-card>
+    </div>
+</div>
