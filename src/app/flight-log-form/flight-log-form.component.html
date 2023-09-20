@@ -1,1 +1,43 @@
-<p>flight-log-form works!</p>
+<div class="bg-fixed bg-center bg-cover min-h-screen" style="background-image: url(./../../assets/homepage6.jpg)">
+    <div class="flex flex-col items-center p-16 min-h-screen backdrop-blur-sm bg-black/50">
+      <div class="artboard flex flex-col items-center bg-base-300 w-auto p-16 rounded-2xl">
+        <h1 class="text-2xl pb-8 font-medium">Flight Log Details</h1>
+    
+        <form (ngSubmit)="onSubmit()">
+          <div class=" pb-8">
+            <label class="text-lg text-left text-base-content" for="aircraftName">Aircraft Name:</label>
+            <select id="aircraftName" name="aircraftName" 
+            required
+              class="select select-bordered w-full max-w-xs mt-4">
+              <option *ngFor="let aircraft of aircrafts">{{ aircraft}}</option>
+            </select>
+          </div>
+    
+          <div class=" pb-8">
+            <label class="text-lg text-left text-base-content" for="flightDate">Flight Date:</label>
+            <input type="date" id="flightDate" name="flightDate" 
+             required
+              class="input input-bordered w-full max-w-sm mt-4" />
+          </div>
+    
+          <div class=" pb-8">
+            <label class="text-lg text-left text-base-content" for="departure">Departure:</label>
+            <input type="text" id="departure" name="departure" placeholder="hh:mm:ss" 
+             required
+              class="input input-bordered w-full max-w-sm mt-4" />
+          </div>
+    
+          <div class=" pb-8">
+            <label class="text-lg text-left text-base-content" for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" placeholder="Destination"
+              required
+              class="input input-bordered w-full max-w-sm mt-4" />
+          </div>
+    
+          <div class=" flex w-full justify-center">
+          <button type="submit"  class=" btn btn-primary capitalize ">Fetch Details</button>
+    
+          </div>
+        </form>
+      </div>
+    </div></div>

@@ -1,1 +1,39 @@
-<p>flight-log-details works!</p>
+<div class="bg-fixed bg-center bg-cover min-h-screen" style="background-image: url(./../../assets/homepage4.jpg)">
+    <div class="flex flex-col items-center p-16 min-h-screen backdrop-blur-sm bg-black/50">
+      <div class="artboard flex flex-col items-center bg-base-300 w-auto p-16 rounded-2xl">
+        <h1 class="text-2xl pb-8 font-medium">Flight Logs</h1>
+  
+  
+  
+        <div class="">
+          <div class="overflow-x-auto">
+            <table class="table table-zebra">
+            <thead>
+              <tr>
+                <th class="text-base	">Flight ID</th>
+                <th class="text-base	">Aircraft ID</th>
+                <th class="text-base	">Date</th>
+                <th class="text-base	">Departure</th>
+                <th class="text-base	">Destination</th>
+                <th class="text-base	">Aircraft Name</th>
+                <th class="text-base	">Serial Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let log of flightLogs">
+                <th  class="text-base	">{{ log.flightLogId }}</th>
+                <th  class="text-base	">{{ log.aircraftId }}</th>
+                <th  class="text-base	">{{ log.date}}</th>
+                <th  class="text-base	">{{ log.departure }}</th>
+                <th  class="text-base	">{{ log.destination }}</th>
+                <th  class="text-base	">{{ log.aircraftName }}</th>
+                <th  class="text-base	">{{ log.aircraftSerialNumber }}</th>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

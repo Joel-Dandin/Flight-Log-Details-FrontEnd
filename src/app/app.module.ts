@@ -9,6 +9,8 @@ import { FlightFormComponent } from './flight-form/flight-form.component';
 import { FlightLogFormComponent } from './flight-log-form/flight-log-form.component';
 import { FlightLogDetailsComponent } from './flight-log-details/flight-log-details.component';
 import { FlightDetailsCardComponent } from './flight-details-card/flight-details-card.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FlightDetailsCardComponent } from './flight-details-card/flight-details
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
