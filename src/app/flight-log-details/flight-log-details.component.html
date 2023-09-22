@@ -10,7 +10,7 @@
             <table class="table table-zebra">
             <thead>
               <tr>
-                <th class="text-base	">Flight ID</th>
+                <th class="text-base	">Flight Log ID</th>
                 <th class="text-base	">Aircraft ID</th>
                 <th class="text-base	">Date</th>
                 <th class="text-base	">Departure</th>
@@ -21,9 +21,9 @@
             </thead>
             <tbody>
               <tr *ngFor="let log of flightLogs">
-                <th  class="text-base	">{{ log.flightLogId }}</th>
-                <th  class="text-base	">{{ log.aircraftId }}</th>
-                <th  class="text-base	">{{ log.date}}</th>
+                <th  class="text-base	">{{ log.id }}</th>
+                <th  class="text-base	">{{ log.aircraft_id }}</th>
+                <th  class="text-base	">{{ log.intdate}}</th>
                 <th  class="text-base	">{{ log.departure }}</th>
                 <th  class="text-base	">{{ log.destination }}</th>
                 <th  class="text-base	">{{ log.aircraftName }}</th>

@@ -1,7 +1,17 @@
 export interface FlightLogDetails {
-    flightLogId: number;
-    aircraftId:number,
-    date: Date;
+    id: number;
+    aircraft_id:number,
+    intdate: Date;
+    departure: string;
+    destination: string;
+    aircraftName: string;
+    aircraftSerialNumber: string;
+  }
+  export interface Flights {
+    date: any;
+    id: number;
+    aircraft_id:number,
+    intdate: Date;
     departure: string;
     destination: string;
     aircraftName: string;

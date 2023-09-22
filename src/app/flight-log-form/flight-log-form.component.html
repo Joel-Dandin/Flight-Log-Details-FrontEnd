@@ -5,31 +5,38 @@
     
         <form (ngSubmit)="onSubmit()">
           <div class=" pb-8">
-            <label class="text-lg text-left text-base-content" for="aircraftName">Aircraft Name:</label>
-            <select id="aircraftName" name="aircraftName" 
+            <label class="text-lg text-left text-base-content" for="aircraftName">Aircraft Id:</label>
+            <select id="aircraftName" name="aircraftName"  [(ngModel)]="flightLog.aircraft_id" (change)="changeName()"
             required
               class="select select-bordered w-full max-w-xs mt-4">
-              <option *ngFor="let aircraft of aircrafts">{{ aircraft}}</option>
+              <option *ngFor="let aircraft of aircrafts">{{ aircraft.id}}</option>
             </select>
+          </div>
+
+          <div class=" pb-8">
+            <label class="text-lg text-left text-base-content" for="aircraftName">Aircraft Name:</label>
+            <input type="text" id="aircraftName" name="aircraftName" value={{aircratft_name}}
+             required
+              class="input input-bordered w-full max-w-sm mt-4"  disabled />
           </div>
     
           <div class=" pb-8">
             <label class="text-lg text-left text-base-content" for="flightDate">Flight Date:</label>
-            <input type="date" id="flightDate" name="flightDate" 
+            <input type="date" id="flightDate" name="flightDate" [(ngModel)]="flightLog.intdate"
              required
               class="input input-bordered w-full max-w-sm mt-4" />
           </div>
     
           <div class=" pb-8">
             <label class="text-lg text-left text-base-content" for="departure">Departure:</label>
-            <input type="text" id="departure" name="departure" placeholder="hh:mm:ss" 
+            <input type="text" id="departure" name="departure" placeholder="hh:mm:ss" [(ngModel)]="flightLog.departure"
              required
               class="input input-bordered w-full max-w-sm mt-4" />
           </div>
     
           <div class=" pb-8">
             <label class="text-lg text-left text-base-content" for="destination">Destination:</label>
-            <input type="text" id="destination" name="destination" placeholder="Destination"
+            <input type="text" id="destination" name="destination" placeholder="Destination" [(ngModel)]="flightLog.destination"
               required
               class="input input-bordered w-full max-w-sm mt-4" />
           </div>

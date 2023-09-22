@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,36 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./flight-details.component.css'],
 })
 export class FlightDetailsComponent {
-  cards = [
-    {
-      id: '1',
-      name: 'Delta',
-      description: 'This a big aircraft',
-      serial_number: '1',
-    },
-    {
-      id: '2',
-      name: 'Beta',
-      description: 'This a big aircraft',
-      serial_number: '1',
-    },
-    {
-      id: '3',
-      name: 'Delta3',
-      description: 'This a big aircraft',
-      serial_number: '1',
-    },
-    {
-      id: '4',
-      name: 'Delta4',
-      description: 'This a big aircraft',
-      serial_number: '1',
-    },
-    {
-      id: '5',
-      name: 'Delta5',
-      description: 'This a big aircraft',
-      serial_number: '1',
-    },
-  ];
+
+  cards: string[] = [];
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http
+      .get<string[]>('http://localhost:8080/Aircraft/allaircraft')
+      .subscribe((data) => {
+        console.log(data);
+        this.cards = data;
+      });
+  }
 }
