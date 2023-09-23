@@ -8,6 +8,14 @@ export interface FlightLogDetails {
     aircraftSerialNumber: string;
   }
   export interface Flights {
+    id: number;
+    description: string;
+    name: string;
+    serial_number: number;
+  }
+
+  
+  export interface FlightDetails {
     date: any;
     id: number;
     aircraft_id:number,
