@@ -10,7 +10,11 @@ import { FlightLogDetails, Flights } from './Model';
 export class FlightLogDetailsComponent {
   flightLogs: FlightLogDetails[] = [];
   flights: Flights[] = [];
+  searchValue:string ='';
+
   constructor(private http: HttpClient) {}
+
+
 
   ngOnInit() {
     this.fetchFlightLogs();

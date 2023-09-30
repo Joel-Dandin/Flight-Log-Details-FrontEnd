@@ -9,9 +9,9 @@ import { FlightFormComponent } from './flight-form/flight-form.component';
 import { FlightLogFormComponent } from './flight-log-form/flight-log-form.component';
 import { FlightLogDetailsComponent } from './flight-log-details/flight-log-details.component';
 import { FlightDetailsCardComponent } from './flight-details-card/flight-details-card.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import {SearchfilterPipe} from './searchfilter.pipe' 
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
     FlightFormComponent,
     FlightLogFormComponent,
     FlightLogDetailsComponent,
-    FlightDetailsCardComponent
+    FlightDetailsCardComponent,
+    SearchfilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

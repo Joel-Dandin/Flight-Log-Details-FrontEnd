@@ -10,6 +10,10 @@
     >
       <h1 class="text-2xl pb-8 font-medium">Flight Logs</h1>
 
+      <div class="flex w-full items-center	justify-end	mb-4">
+        <h2 for="search" class="text-lg pr-4">Filter :</h2>
+        <input id="search" [(ngModel)]="searchValue" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+      </div>
       <div class="">
         <div class="overflow-x-auto">
           <table class="table table-zebra">
@@ -25,18 +29,18 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let log of flightLogs">
+              <tr *ngFor="let log of flightLogs | searchfilter:searchValue ">
                 <th class="text-base">{{ log.id }}</th>
                 <th class="text-base">{{ log.aircraft_id }}</th>
                 <th class="text-base">{{ log.intdate | date:'mediumDate'}}</th>
                 <th class="text-base">{{ log.departure }}</th>
                 <th class="text-base">{{ log.destination }}</th>
-                <th class="text-base">
-                  {{ flights[log.aircraft_id - 1].name }}
+                <!-- <th class="text-base">
+                  {{ flights[log.aircraft_id - 1].name  }}
                 </th>
                 <th class="text-base">
                   {{ flights[log.aircraft_id - 1].serial_number }}
-                </th>
+                </th> -->
               </tr>
             </tbody>
           </table>
